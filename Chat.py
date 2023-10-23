@@ -33,7 +33,7 @@ llm = ChatOpenAI(
         temperature=0, model="gpt-3.5-turbo-0613", openai_api_key=openai_api_key, streaming=True
     )
 
-    pandas_df_agent = create_pandas_dataframe_agent(
+pandas_df_agent = create_pandas_dataframe_agent(
         llm,
         df,
         verbose=True,
