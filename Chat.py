@@ -1,3 +1,6 @@
+!pip install openai
+!pip install langchain
+!pip install streamlit
 import pandas as pd
 import numpy as np
 import streamlit as st
