@@ -72,15 +72,15 @@ if prompt := st.chat_input(placeholder="What is this data about?"):
 
     llm = ChatOpenAI(
         temperature=0, model="gpt-3.5-turbo-0613", openai_api_key=openai_api_key, streaming=True
-    )
+         )
 
-    pandas_df_agent = create_pandas_dataframe_agent(
+        pandas_df_agent = create_pandas_dataframe_agent(
         llm,
         df,
         verbose=True,
         agent_type=AgentType.OPENAI_FUNCTIONS,
         handle_parsing_errors=True,
-    )
+        )
 
     with st.chat_message("assistant"):
         st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
